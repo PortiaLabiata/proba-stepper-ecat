@@ -5,35 +5,42 @@ void spi_gpio_setup(void)
 {
     GPIO_InitTypeDef gpio;
     RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
 
     /* SPI GPIO Configuration --------------------------------------------------*/
+	/*
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource5,  GPIO_AF_SPI1);
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_SPI1);
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_SPI1);
+	*/
+
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource3, GPIO_AF_SPI1);
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource4, GPIO_AF_SPI1);
+	GPIO_PinAFConfig(GPIOB, GPIO_PinSource5, GPIO_AF_SPI1);
 
     /* SPI SCK pin configuration */
+    gpio.GPIO_Pin   = GPIO_Pin_3;
+    gpio.GPIO_Mode  = GPIO_Mode_AF;
+    gpio.GPIO_Speed = GPIO_Speed_50MHz;
+    gpio.GPIO_OType = GPIO_OType_PP;
+    gpio.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOB, &gpio);
+
+    /* SPI  MISO pin configuration */
+    gpio.GPIO_Pin   = GPIO_Pin_4;
+    gpio.GPIO_Mode  = GPIO_Mode_AF;
+    gpio.GPIO_Speed = GPIO_Speed_50MHz;
+    gpio.GPIO_OType = GPIO_OType_PP;
+    gpio.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOB, &gpio);  
+
+    /* SPI  MOSI pin configuration */
     gpio.GPIO_Pin   = GPIO_Pin_5;
     gpio.GPIO_Mode  = GPIO_Mode_AF;
     gpio.GPIO_Speed = GPIO_Speed_50MHz;
     gpio.GPIO_OType = GPIO_OType_PP;
-    gpio.GPIO_PuPd  = GPIO_PuPd_DOWN;
-    GPIO_Init(GPIOA, &gpio);
-
-    /* SPI  MISO pin configuration */
-    gpio.GPIO_Pin   = GPIO_Pin_6;
-    gpio.GPIO_Mode  = GPIO_Mode_AF;
-    gpio.GPIO_Speed = GPIO_Speed_50MHz;
-    gpio.GPIO_OType = GPIO_OType_PP;
-    gpio.GPIO_PuPd  = GPIO_PuPd_DOWN;
-    GPIO_Init(GPIOA, &gpio);  
-
-    /* SPI  MOSI pin configuration */
-    gpio.GPIO_Pin   = GPIO_Pin_7;
-    gpio.GPIO_Mode  = GPIO_Mode_AF;
-    gpio.GPIO_Speed = GPIO_Speed_50MHz;
-    gpio.GPIO_OType = GPIO_OType_PP;
-    gpio.GPIO_PuPd  = GPIO_PuPd_DOWN;
-    GPIO_Init(GPIOA, &gpio);
+    gpio.GPIO_PuPd  = GPIO_PuPd_NOPULL;
+    GPIO_Init(GPIOB, &gpio);
 
     /* CS */
     gpio.GPIO_Pin   = GPIO_Pin_4; 

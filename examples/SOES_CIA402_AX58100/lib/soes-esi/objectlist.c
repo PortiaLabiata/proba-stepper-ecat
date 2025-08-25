@@ -168,7 +168,7 @@ const _objd SDO6041[] =
 };
 const _objd SDO6060[] =
 {
-  {0x0, DTYPE_INTEGER8, 8, ATYPE_RO, acName6060, 0, &Obj.Modes_of_operation},
+  {0x0, DTYPE_INTEGER8, 8, ATYPE_RW, acName6060, 0, &Obj.Modes_of_operation},
 };
 const _objd SDO6061[] =
 {

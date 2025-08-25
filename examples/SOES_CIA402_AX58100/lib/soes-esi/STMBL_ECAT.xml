@@ -907,7 +907,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
