@@ -8,15 +8,15 @@ import struct
 import xml.etree.ElementTree as ET
 
 
-binary_to_patch = "./lib/soes-esi/cia402.bin"
-binary_patched = "./lib/soes-esi/ax58100_patched/cia402patched.bin"
-xml_to_patch = "./lib/soes-esi/cia402.xml"
-xml_patched = "./lib/soes-esi/ax58100_patched/cia402patched.xml"
+binary_to_patch = "./lib/soes-esi/eeprom.bin"
+binary_patched = "./lib/soes-esi/ax58100_patched/eeprom_patched.bin"
+xml_to_patch = "./lib/soes-esi/STMBL_ECAT.xml"
+xml_patched = "./lib/soes-esi/ax58100_patched/STMBL_ECAT_patched.xml"
 
 # ESI .bin address for configuration CRC
 CRC_OFFSET_0x0E = 0x0E
 # Host Interface Extend Setting and Drive Strength (0x0A)
-HIES_Index = 0x0A    # Address in ESI binary configuration 
+HIES_Index = 0x0A    # Address in ESI binary configuration
 HIES_Value = b'\x1a' # 0x1A value: (INT edge pulse length, 8 mA Control + IO 9:0 Drive Select)
 HIES_ValueStr = "1A"
 
@@ -34,10 +34,10 @@ def calcChecksum(data, offset = CRC_OFFSET_0x0E, crc = 0xFF):
 def calculate_esc_checksum(config_area_bytes):
     """
     Word 0x7 [Byte 0x0D] Checksum
-    Low byte contains remainder of division of word 0 to word 6 as unsigned number 
+    Low byte contains remainder of division of word 0 to word 6 as unsigned number
     divided by the polynomial x8+x²+x+1 (initial value 0xFF).
     NOTE: For debugging purposes it is possible to disable the checksum validation
-    with a checksum value of 0x88A4. Never use this for production! 
+    with a checksum value of 0x88A4. Never use this for production!
     """
     if len(config_area_bytes) != CRC_OFFSET_0x0E:
         raise ValueError("Wrong config bytes length: got {}, should {}".format(len(config_area_bytes), CRC_OFFSET_0x0E))
@@ -95,11 +95,11 @@ def apply_xml_AX58100_patches(filename):
 
 
 def patch_xml(file_in, file_out):
-    '''SDK outputs           
+    '''SDK outputs
     <ConfigData>050600440A000000</ConfigData>
     ASIX code samples have config like
     <ConfigData>050403440a00000000001a000000</ConfigData>
-    so .xml can be used by Beckhoff EEPROM programmer 
+    so .xml can be used by Beckhoff EEPROM programmer
     '''
     if file_in != file_out:
         if os.path.exists(file_out):

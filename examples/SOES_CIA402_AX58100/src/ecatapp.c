@@ -106,6 +106,7 @@ uint16_t check_dc_handler (void)
 void ecatapp()
 {
     cia402_state_machine(&cia402axis, Obj.Control_Word);
+	Obj.Mode_of_operation_display = Obj.Modes_of_operation;
 }
 
 

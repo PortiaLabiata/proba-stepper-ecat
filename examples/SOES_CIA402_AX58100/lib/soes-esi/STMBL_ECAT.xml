@@ -13,7 +13,7 @@
     </Groups>
     <Devices>
       <Device Physics="YY ">
-        <Type ProductCode="#x20192" RevisionNo="#x1">AC servodrive </Type>
+        <Type ProductCode="#x20192" RevisionNo="#x1">AC servodrive</Type>
         <Name LcId="1033">STMBL ECAT</Name>
         <GroupType>Servodrives</GroupType>
         <Profile>
@@ -873,6 +873,18 @@
                 </Flags>
               </Object>
               <Object>
+                <Index>#x603F</Index>
+                <Name>Error code</Name>
+                <Type>UINT</Type>
+                <BitSize>16</BitSize>
+                <Info>
+                  <DefaultValue>0</DefaultValue>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
                 <Index>#x6040</Index>
                 <Name>Control Word</Name>
                 <Type>UINT</Type>
@@ -907,7 +919,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>rw</Access>
+                  <Access>ro</Access>
                 </Flags>
               </Object>
               <Object>
