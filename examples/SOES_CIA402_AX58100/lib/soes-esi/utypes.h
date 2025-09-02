@@ -45,9 +45,12 @@ typedef struct
       uint16_t Sync_modes_supported;
       uint32_t Minimum_Cycle_Time;
    } Sync_Manager_3_Parameters;
-   uint16_t Error_code;
    int8_t Modes_of_operation;
    int8_t Mode_of_operation_display;
+   int32_t Velocity_actual;
+   uint32_t Profile_acceleration;
+   uint32_t Profile_deceleration;
+   int32_t Target_velocity;
    uint32_t Supported_drive_modes;
 } _Objects;
 

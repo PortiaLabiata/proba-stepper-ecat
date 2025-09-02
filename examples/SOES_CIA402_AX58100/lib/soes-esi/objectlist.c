@@ -58,13 +58,16 @@ static const char acName1C33_02[] = "CycleTime";
 static const char acName1C33_03[] = "ShiftTime";
 static const char acName1C33_04[] = "Sync modes supported";
 static const char acName1C33_05[] = "Minimum Cycle Time";
-static const char acName603F[] = "Error code";
 static const char acName6040[] = "Control Word";
 static const char acName6041[] = "Status Word";
 static const char acName6060[] = "Modes of operation";
 static const char acName6061[] = "Mode of operation display";
 static const char acName6064[] = "Position actual";
+static const char acName606C[] = "Velocity actual";
 static const char acName607A[] = "Target position";
+static const char acName6083[] = "Profile acceleration";
+static const char acName6084[] = "Profile deceleration";
+static const char acName60FF[] = "Target velocity";
 static const char acName6502[] = "Supported drive modes";
 
 const _objd SDO1000[] =
@@ -159,13 +162,9 @@ const _objd SDO1C33[] =
   {0x04, DTYPE_UNSIGNED16, 16, ATYPE_RO, acName1C33_04, 6, &Obj.Sync_Manager_3_Parameters.Sync_modes_supported},
   {0x05, DTYPE_UNSIGNED32, 32, ATYPE_RO, acName1C33_05, 125000, &Obj.Sync_Manager_3_Parameters.Minimum_Cycle_Time},
 };
-const _objd SDO603F[] =
-{
-  {0x0, DTYPE_UNSIGNED16, 16, ATYPE_RO, acName603F, 0, &Obj.Error_code},
-};
 const _objd SDO6040[] =
 {
-  {0x0, DTYPE_UNSIGNED16, 16, ATYPE_RW | ATYPE_RXPDO, acName6040, 0, &Obj.Control_Word},
+  {0x0, DTYPE_UNSIGNED16, 16, ATYPE_RO | ATYPE_RXPDO, acName6040, 0, &Obj.Control_Word},
 };
 const _objd SDO6041[] =
 {
@@ -173,7 +172,7 @@ const _objd SDO6041[] =
 };
 const _objd SDO6060[] =
 {
-  {0x0, DTYPE_INTEGER8, 8, ATYPE_RW, acName6060, 0, &Obj.Modes_of_operation},
+  {0x0, DTYPE_INTEGER8, 8, ATYPE_RO, acName6060, 0, &Obj.Modes_of_operation},
 };
 const _objd SDO6061[] =
 {
@@ -183,9 +182,25 @@ const _objd SDO6064[] =
 {
   {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO | ATYPE_TXPDO, acName6064, 0, &Obj.Position_actual},
 };
+const _objd SDO606C[] =
+{
+  {0x0, DTYPE_INTEGER32, 32, ATYPE_RO, acName606C, 0, &Obj.Velocity_actual},
+};
 const _objd SDO607A[] =
 {
   {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO | ATYPE_RXPDO, acName607A, 0, &Obj.Target_position},
+};
+const _objd SDO6083[] =
+{
+  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO, acName6083, 0, &Obj.Profile_acceleration},
+};
+const _objd SDO6084[] =
+{
+  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO, acName6084, 0, &Obj.Profile_deceleration},
+};
+const _objd SDO60FF[] =
+{
+  {0x0, DTYPE_INTEGER32, 32, ATYPE_RO, acName60FF, 0, &Obj.Target_velocity},
 };
 const _objd SDO6502[] =
 {
@@ -210,13 +225,16 @@ const _objectlist SDOobjects[] =
   {0x1C13, OTYPE_ARRAY, 2, 0, acName1C13, SDO1C13},
   {0x1C32, OTYPE_RECORD, 5, 0, acName1C32, SDO1C32},
   {0x1C33, OTYPE_RECORD, 5, 0, acName1C33, SDO1C33},
-  {0x603F, OTYPE_VAR, 0, 0, acName603F, SDO603F},
   {0x6040, OTYPE_VAR, 0, 0, acName6040, SDO6040},
   {0x6041, OTYPE_VAR, 0, 0, acName6041, SDO6041},
   {0x6060, OTYPE_VAR, 0, 0, acName6060, SDO6060},
   {0x6061, OTYPE_VAR, 0, 0, acName6061, SDO6061},
   {0x6064, OTYPE_VAR, 0, 0, acName6064, SDO6064},
+  {0x606C, OTYPE_VAR, 0, 0, acName606C, SDO606C},
   {0x607A, OTYPE_VAR, 0, 0, acName607A, SDO607A},
+  {0x6083, OTYPE_VAR, 0, 0, acName6083, SDO6083},
+  {0x6084, OTYPE_VAR, 0, 0, acName6084, SDO6084},
+  {0x60FF, OTYPE_VAR, 0, 0, acName60FF, SDO60FF},
   {0x6502, OTYPE_VAR, 0, 0, acName6502, SDO6502},
   {0xffff, 0xff, 0xff, 0xff, NULL, NULL}
 };

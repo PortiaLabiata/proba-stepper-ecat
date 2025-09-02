@@ -35,7 +35,7 @@ int main(void)
 
 	stp_init(&stp);
 	stp_register(&stp);
-	stp_enable(&stp);
+	//stp_enable(&stp);
 
 	while (1)
 	{

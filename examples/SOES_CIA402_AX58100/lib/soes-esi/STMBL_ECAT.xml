@@ -453,6 +453,10 @@
                 <Name>SINT</Name>
                 <BitSize>8</BitSize>
               </DataType>
+              <DataType>
+                <Name>DINT</Name>
+                <BitSize>32</BitSize>
+              </DataType>
             </DataTypes>
             <Objects>
               <Object>
@@ -873,18 +877,6 @@
                 </Flags>
               </Object>
               <Object>
-                <Index>#x603F</Index>
-                <Name>Error code</Name>
-                <Type>UINT</Type>
-                <BitSize>16</BitSize>
-                <Info>
-                  <DefaultValue>0</DefaultValue>
-                </Info>
-                <Flags>
-                  <Access>ro</Access>
-                </Flags>
-              </Object>
-              <Object>
                 <Index>#x6040</Index>
                 <Name>Control Word</Name>
                 <Type>UINT</Type>
@@ -948,6 +940,18 @@
                 </Flags>
               </Object>
               <Object>
+                <Index>#x606C</Index>
+                <Name>Velocity actual</Name>
+                <Type>DINT</Type>
+                <BitSize>32</BitSize>
+                <Info>
+                  <DefaultValue>0</DefaultValue>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
                 <Index>#x607A</Index>
                 <Name>Target position</Name>
                 <Type>UDINT</Type>
@@ -958,6 +962,42 @@
                 <Flags>
                   <Access>ro</Access>
                   <PdoMapping>R</PdoMapping>
+                </Flags>
+              </Object>
+              <Object>
+                <Index>#x6083</Index>
+                <Name>Profile acceleration</Name>
+                <Type>UDINT</Type>
+                <BitSize>32</BitSize>
+                <Info>
+                  <DefaultValue>0</DefaultValue>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
+                <Index>#x6084</Index>
+                <Name>Profile deceleration</Name>
+                <Type>UDINT</Type>
+                <BitSize>32</BitSize>
+                <Info>
+                  <DefaultValue>0</DefaultValue>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
+                <Index>#x60FF</Index>
+                <Name>Target velocity</Name>
+                <Type>DINT</Type>
+                <BitSize>32</BitSize>
+                <Info>
+                  <DefaultValue>0</DefaultValue>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
                 </Flags>
               </Object>
               <Object>
@@ -1030,6 +1070,26 @@
           <CoE SdoInfo="true" PdoAssign="false" PdoConfig="false" PdoUpload="true" CompleteAccess="false" />
         </Mailbox>
         <Dc>
+          <OpMode>
+            <Name>SM-Synchron</Name>
+            <Desc>SM-Synchron</Desc>
+            <AssignActivate>#x000</AssignActivate>
+          </OpMode>
+          <OpMode>
+            <Name>DC</Name>
+            <Desc>DC-Synchron</Desc>
+            <AssignActivate>#x300</AssignActivate>
+          </OpMode>
+          <OpMode>
+            <Name>SM-Synchron</Name>
+            <Desc>SM-Synchron</Desc>
+            <AssignActivate>#x000</AssignActivate>
+          </OpMode>
+          <OpMode>
+            <Name>DC</Name>
+            <Desc>DC-Synchron</Desc>
+            <AssignActivate>#x300</AssignActivate>
+          </OpMode>
           <OpMode>
             <Name>SM-Synchron</Name>
             <Desc>SM-Synchron</Desc>

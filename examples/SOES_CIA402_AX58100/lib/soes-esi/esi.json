@@ -30,7 +30,8 @@
     "CoeDetailsEnablePDOAssign": false,
     "CoeDetailsEnablePDOConfiguration": false,
     "CoeDetailsEnableUploadAtStartup": true,
-    "CoeDetailsEnableSDOCompleteAccess": false
+    "CoeDetailsEnableSDOCompleteAccess": false,
+    "DetailsEnableUseFoE": false
   },
   "od": {
     "sdo": {
@@ -60,6 +61,24 @@
         "value": "0",
         "isSDOitem": true,
         "data": "&Obj.Mode_of_operation_display"
+      },
+      "6083": {
+        "otype": "VAR",
+        "name": "Profile acceleration",
+        "access": "RO",
+        "dtype": "UNSIGNED32",
+        "value": "0",
+        "isSDOitem": true,
+        "data": "&Obj.Profile_acceleration"
+      },
+      "6084": {
+        "otype": "VAR",
+        "name": "Profile deceleration",
+        "access": "RO",
+        "dtype": "UNSIGNED32",
+        "value": "0",
+        "isSDOitem": true,
+        "data": "&Obj.Profile_deceleration"
       },
       "6502": {
         "otype": "VAR",
@@ -196,6 +215,24 @@
           }
         ],
         "isSDOitem": true
+      },
+      "60FF": {
+        "otype": "VAR",
+        "name": "Target velocity",
+        "access": "RO",
+        "dtype": "INTEGER32",
+        "value": "0",
+        "isSDOitem": true,
+        "data": "&Obj.Target_velocity"
+      },
+      "606C": {
+        "otype": "VAR",
+        "name": "Velocity actual",
+        "access": "RO",
+        "dtype": "INTEGER32",
+        "value": "0",
+        "isSDOitem": true,
+        "data": "&Obj.Velocity_actual"
       }
     },
     "txpdo": {
@@ -248,6 +285,42 @@
     }
   },
   "dc": [
+    {
+      "Name": "SM-Synchron",
+      "Description": "SM-Synchron",
+      "AssignActivate": "#x000",
+      "Sync0cycleTime": "0",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    },
+    {
+      "Name": "DC",
+      "Description": "DC-Synchron",
+      "AssignActivate": "#x300",
+      "Sync0cycleTime": "0",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    },
+    {
+      "Name": "SM-Synchron",
+      "Description": "SM-Synchron",
+      "AssignActivate": "#x000",
+      "Sync0cycleTime": "0",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    },
+    {
+      "Name": "DC",
+      "Description": "DC-Synchron",
+      "AssignActivate": "#x300",
+      "Sync0cycleTime": "0",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    },
     {
       "Name": "SM-Synchron",
       "Description": "SM-Synchron",
