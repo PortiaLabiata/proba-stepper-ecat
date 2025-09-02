@@ -9,10 +9,8 @@
 #include "cia402device.h"
 #include "ecatapp.h"
 
-
 /* CANopen Object Dictionary */
 _Objects    Obj;
-
 
 /* Application hook declaration */
 void ecatapp(void);
@@ -25,22 +23,26 @@ void app_cia402_mc(void);
 
 /* SOES configuration */
 static esc_cfg_t config = { 
-    .user_arg                  = "ax58100",
-    .use_interrupt             = 1,
-    .watchdog_cnt              = INT32_MAX,
-    .set_defaults_hook         = NULL,
-    .pre_state_change_hook     = NULL,
-    .post_state_change_hook    = NULL,
-    .application_hook          = ecatapp,
-    .safeoutput_override       = NULL,
-    .pre_object_download_hook  = NULL,
-    .post_object_download_hook = NULL,
-    .rxpdo_override            = rxpdo_override,
-    .txpdo_override            = txpdo_override,
-    .esc_hw_interrupt_enable   = ESC_interrupt_enable,
-    .esc_hw_interrupt_disable  = ESC_interrupt_disable,
-    .esc_hw_eep_handler        = NULL,
-    .esc_check_dc_handler      = check_dc_handler,
+    .user_arg                       = "ax58100",
+    .use_interrupt                  = 1,
+    .watchdog_cnt                   = INT32_MAX,
+    .skip_default_initialization    = false,
+    .set_defaults_hook              = NULL,
+    .pre_state_change_hook          = NULL,
+    .post_state_change_hook         = NULL,
+    .application_hook               = ecatapp,
+    .safeoutput_override            = NULL,
+    .pre_object_download_hook       = NULL,
+    .post_object_download_hook      = NULL,
+    .pre_object_upload_hook         = NULL,
+    .post_object_upload_hook        = NULL,
+    .rxpdo_override                 = rxpdo_override,
+    .txpdo_override                 = txpdo_override,
+    .esc_hw_interrupt_enable        = ESC_interrupt_enable,
+    .esc_hw_interrupt_disable       = ESC_interrupt_disable,
+    .esc_hw_eep_handler             = NULL,
+    .esc_check_dc_handler           = check_dc_handler,
+    .get_device_id                  = NULL
 };
 
 /* CiA402 motion control configuration */

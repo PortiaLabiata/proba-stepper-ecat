@@ -29,17 +29,16 @@ include_dirs = [
     '/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc',
     '/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32',
     '/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4',
+    '/home/portia_labiata/.platformio/packages/framework-cmsis-stm32f4/Include/',
     'include',
 ]
 
 recurse_dirs = [
     'lib',
+    '/home/portia_labiata/.platformio/packages/framework-spl',
 ]
 
 defines = [
-    'CONFIG_HAL_BOARD=10',
-    'CONFIG_HAL_BOARD_SUBTYPE=5009',
-    'DRONECAN_CXX_WRAPPERS=1',
 ]
 
 

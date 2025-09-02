@@ -6,10 +6,10 @@
 #include "esc.h"
 #include "ecat_slv.h"
 #include "ecatapp.h"
+#include "stepper.h"
 
-
-// uint32_t ecatapp_benchmark_us(void);
-
+void stp_isr_callback(void);
+void stp_ll_config(void);
 
 int main(void)
 {
@@ -17,39 +17,43 @@ int main(void)
 	APP_USART_Init();
 	delay_init(); 
     STM_EVAL_PBInit(BUTTON_MODE_GPIO);
-	printf("\r\n[ESC Setup] %s \r\n", "Strted");
     ecatapp_init();
-    printf("\r\n[ESC Setup] Done, ready \r\n\n");
-    
+
+	stp_ll_config();
+
+	struct stp_t stp = {
+		.en_pin = {
+			.port = GPIOA,
+			.pin = PIN_NUM_10
+		},
+		.dir_pin = {
+			.port = GPIOA,
+			.pin = PIN_NUM_9
+		},
+		.tim = TIM1
+	};
+
+	stp_init(&stp);
+	stp_register(&stp);
+	stp_enable(&stp);
 
 	while (1)
 	{
-        // ecatapp_benchmark_us();
         ecatapp_loop();
 	}
 }
 
-// uint32_t ecatapp_benchmark_us()
-// {
-//     // benchmark start
-//     stopwatch_t st;
-//     stopwatch_start(&st);
-    
-//     ecatapp_loop();
- 
-//     // benchmark stop
-//     volatile uint32_t elapsed_us = stopwatch_now_us(&st);
-//     static volatile uint32_t hiscore = 0;
+void stp_ll_config(void) {
+	RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+	
+	GPIOA->MODER |= GPIO_MODER_MODER8_1;
+	GPIOA->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR8_0;
+	GPIOA->AFR[1] |= GPIO_AF_TIM1;
 
-//     if (elapsed_us > hiscore) 
-//     {
-//         hiscore = elapsed_us;
-//     }
+	GPIOA->MODER |= (GPIO_MODER_MODER9_0 | GPIO_MODER_MODER10_0);
+}
 
-//     if (STM_EVAL_IsPressed())
-//     {
-//         printf("PDI irq = %s \r\n", HEX4B(pdi_irq_flag));
-//     }
-
-//     return elapsed_us;
-// }
+void stp_isr_callback(void) {
+	asm("nop");
+}
