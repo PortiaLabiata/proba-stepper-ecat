@@ -1,8 +1,8 @@
 {
     "name": "Stepper",
     "version": "1.0.0",
-    "description": "Stepper motor controller with ramp functionality intended for STP/DIR kind of drivers",
-    "keywords": "stepper, EtherCAT, CIA402",
+    "description": "Simple stepper motor driver for A4988 or other STEP/DIR drivers.",
+    "keywords": "stepper, A4988, STM32F103",
     "frameworks": "*",
     "platforms": "*"
 }  

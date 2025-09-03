@@ -249,6 +249,11 @@ protected:
 //! \warning
 //! The usage of this method is \b not real-time capable.
 //  ----------------------------------------------------------
+    typedef void FILE;
+    void Echo(FILE* FileHandler = nullptr) const {
+        return;
+    }
+/*
     void Echo(FILE* FileHandler = stdout) const
     {
         unsigned int        i   =   0;
@@ -276,7 +281,7 @@ protected:
         fprintf(FileHandler, "\n");
         return;
     }
-
+*/
 
 public:
 

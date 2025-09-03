@@ -282,6 +282,12 @@ public:
 //! \details
 //! \copydetails RMLOutputParameters::Echo()
 //  ----------------------------------------------------------
+
+    typedef void FILE;
+    void Echo(FILE* FileHandler = nullptr) const {
+        return;
+    }
+/*
     void Echo(FILE* FileHandler = stdout) const
     {
         unsigned int        i   =   0;
@@ -302,7 +308,7 @@ public:
 
         return;
     }
-
+*/
 
 //  ---------------------- Doxygen info ----------------------
 //! \var RMLDoubleVector *PositionValuesAtTargetVelocity

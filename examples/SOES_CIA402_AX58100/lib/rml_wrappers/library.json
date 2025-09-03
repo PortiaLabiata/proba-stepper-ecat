@@ -1,0 +1,22 @@
+{
+    "name": "reflexxes_wrapper",
+    "version": "1.0.0",
+    "description": "C wrapper for Reflexxes Type II trajectory generator.",
+    "keywords": "trajectory generator",
+    "frameworks": "*",
+    "platforms": "*",
+    "dependencies": [
+        {
+            "name": "reflexxes"
+        }
+    ],
+    "build": {
+        "flags": [
+            "-xc++",
+            "-fno-exceptions"
+        ],
+        "unflags": [
+            "-nostdlib"
+        ]
+    }
+}  

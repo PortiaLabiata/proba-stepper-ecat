@@ -8,6 +8,9 @@
 #include "ecatapp.h"
 #include "stepper.h"
 
+#include <rml_api_wrapper.h>
+#include <rml_vel_ip_wrapper.h>
+
 void stp_isr_callback(void);
 void stp_ll_config(void);
 
@@ -18,6 +21,11 @@ int main(void)
 	delay_init(); 
     STM_EVAL_PBInit(BUTTON_MODE_GPIO);
     ecatapp_init();
+
+	rml_vel_ip_ptr_t ip = rml_vel_ip_create();
+	rml_vel_ip_current_pos_set(ip, 0);
+	rml_vel_ip_current_vel_set(ip, 0);
+	rml_vel_ip_current_acc_set(ip, 0);
 
 	stp_ll_config();
 

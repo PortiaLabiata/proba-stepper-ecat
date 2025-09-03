@@ -1,0 +1,17 @@
+{
+    "name": "reflexxes",
+    "version": "1.0.0",
+    "description": "Reflexxes trajectory generator with C wrapper",
+    "keywords": "trajectory generator",
+    "frameworks": "*",
+    "platforms": "*",
+    "build": {
+        "flags": [
+            "-xc++",
+            "-fno-exceptions"
+        ],
+        "unflags": [
+            "-nostdlib"
+        ]
+    }
+}  
