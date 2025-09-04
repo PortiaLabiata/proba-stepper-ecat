@@ -1,0 +1,8 @@
+{
+    "name": "Trajectory generator",
+    "version": "1.0.0",
+    "description": "Simple trajectory generator for a stepper driver, supports trapezoidal and S-curve ramps.",
+    "keywords": "stepper, trajectory generator",
+    "frameworks": "*",
+    "platforms": "*"
+}  
