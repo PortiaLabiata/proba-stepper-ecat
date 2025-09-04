@@ -1,48 +1,27 @@
 #include "traj_trapez.h"
 
+static int16_t traj_trapez_get_c0(struct traj_trapez_init_t *init, int32_t omega_0) {
+    return (init->f / init->accel) * (-omega_0 + sqrtf(omega_0*omega_0 + 2*init->accel*ALPHA));
+}
+
+static int16_t traj_trapez_get_n_target(struct traj_trapez_init_t *init, int16_t omega_0) {
+    return 0;
+}
+
+static float traj_trapez_get_magic(struct traj_trapez_init_t *init, int16_t omega_0) {
+    return (sqrtf(omega_0*omega_0 + 4*init->accel*ALPHA) - sqrtf(omega_0*omega_0 + 2*init->accel*ALPHA)) / ((sqrtf(omega_0 * omega_0 + 2*init->accel*ALPHA) - omega_0) * ((2*omega_0*omega_0 + 3*ALPHA*init->accel) / (2*omega_0*omega_0 + 5*ALPHA*init->accel)));
+}
+
 void traj_trapez_prime(struct traj_trapez_t *traj, struct traj_trapez_init_t *init) {
-    traj->c_n = init->f * sqrtf(2 * ALPHA / init->accel);
-    traj->n_target_accel = (init->vel_target*init->vel_target) / (ALPHA2 * init->accel);
-    traj->n_start_decel = -(int32_t)(traj->n_target_accel * init->accel / init->decel);
-    traj->state = TRAJ_TRAPEZ_STATE_STOP;
+    // В самом начале скорость ноль
+    traj->c_n = traj_trapez_get_magic(init, 0) * traj_trapez_get_c0(init, 0);
+    traj->n_omega_target = traj_trapez_get_n_target(init, 0);
+    traj->accel = init->accel;
+    traj->omega_0 = 0;
+    traj->n = 1;
 }
 
 void traj_trapez_advance(struct traj_trapez_t *traj) {
-    switch (traj->state) {
-        case TRAJ_TRAPEZ_STATE_ACCEL:
-            if (traj->n >= traj->n_target_accel) {
-                traj->state = TRAJ_TRAPEZ_STATE_RUN;
-            } else {
-                traj->c_n = traj->c_n - 2*traj->c_n / (4 * traj->n + 1);
-                traj->n++;
-            }
-            break;
-        case TRAJ_TRAPEZ_STATE_DECEL:
-            if (traj->n >= 0) {
-                traj->state = TRAJ_TRAPEZ_STATE_STOP;
-            } else {
-                traj->c_n = traj->c_n - 2*traj->c_n / (4 * traj->n + 1);
-                traj->n++;
-            }
-            break;
-        case TRAJ_TRAPEZ_STATE_RUN:
-        case TRAJ_TRAPEZ_STATE_STOP:
-        default:
-            return;
-    }
-}
-
-void traj_trapez_execute_cmd(struct traj_trapez_t *traj, enum traj_trapez_cmd_t cmd) {
-    switch (cmd) {
-        case TRAJ_TRAPEZ_CMD_ACCELERATE:
-            traj->n = 1;
-            traj->state = TRAJ_TRAPEZ_STATE_ACCEL;
-            break;
-        case TRAJ_TRAPEZ_CMD_DECELERATE:
-            traj->n = traj->n_start_decel;
-            traj->state = TRAJ_TRAPEZ_STATE_DECEL;
-            break;
-        default:
-            return;
-    }
+    traj->c_n *= (2*traj->omega_0*traj->omega_0 + ALPHA*traj->accel*(4*traj->n - 1)) / (2*traj->omega_0*traj->omega_0 + ALPHA*traj->accel*(4*traj->n + 1));
+    traj->n++;
 }

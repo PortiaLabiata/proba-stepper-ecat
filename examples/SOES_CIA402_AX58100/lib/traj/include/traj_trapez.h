@@ -4,7 +4,6 @@
 #include <stdbool.h>
 
 #define ALPHA   1.8
-#define ALPHA2  ALPHA*2
 
 enum traj_trapez_state_t {
     TRAJ_TRAPEZ_STATE_STOP,
@@ -19,20 +18,21 @@ enum traj_trapez_cmd_t {
 };
 
 struct traj_trapez_init_t {
-    uint16_t f;
-    uint16_t accel;
-    uint16_t decel;
-    uint16_t vel_target;
+    int32_t f;
+    int16_t accel;
+    int16_t decel;
+    int16_t omega_target;
 };
 
 struct traj_trapez_t {
-    volatile int16_t n;
+    volatile uint16_t n;
     volatile int16_t c_n;
-    int16_t n_target_accel;
-    int16_t n_start_decel;
-    enum traj_trapez_state_t state;
+    int16_t omega_0;
+    int16_t accel;
+
+    int16_t n_omega_target;
+    int16_t n_decel_start;
 };
 
 void traj_trapez_prime(struct traj_trapez_t *traj, struct traj_trapez_init_t *init);
 void traj_trapez_advance(struct traj_trapez_t *traj);
-void traj_trapez_execute_cmd(struct traj_trapez_t *traj, enum traj_trapez_cmd_t cmd);
