@@ -26,7 +26,7 @@ struct traj_trapez_init_t {
 
 struct traj_trapez_t {
     volatile uint16_t n;
-    volatile int16_t c_n;
+    volatile int32_t c_n;
     int16_t omega_0;
     int16_t accel;
 
