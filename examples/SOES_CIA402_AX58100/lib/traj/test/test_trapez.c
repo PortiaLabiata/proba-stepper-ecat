@@ -15,9 +15,17 @@ int main(int argc, char **argv) {
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
     traj_test(&traj, &init, 100);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_DECELERATE);
-    traj_test(&traj, &init, 10);
+    traj_test(&traj, &init, 30);
+
+    init.vel_target = 40;
+    init.accel = 20;
+    init.decel = 30;
+
+    traj_trapez_prime(&traj, &init);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
-    traj_test(&traj, &init, 20);
+    traj_test(&traj, &init, 100);
+    traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_DECELERATE);
+    traj_test(&traj, &init, 100);
 }
 
 void traj_test(struct traj_trapez_t *traj, struct traj_trapez_init_t *init, int n) {
