@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
     traj_test(&traj, &init, 100);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_DECELERATE);
-    traj_test(&traj, &init, 100);
+    traj_test(&traj, &init, 30);
 }
 
 void traj_test(struct traj_trapez_t *traj, struct traj_trapez_init_t *init, int n) {

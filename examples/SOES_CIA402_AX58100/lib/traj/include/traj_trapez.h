@@ -19,17 +19,17 @@ enum traj_trapez_cmd_t {
 };
 
 struct traj_trapez_init_t {
-    uint16_t f;
-    uint16_t accel;
-    uint16_t decel;
-    uint16_t vel_target;
+    uint32_t f;
+    uint32_t accel;
+    uint32_t decel;
+    uint32_t vel_target;
 };
 
 struct traj_trapez_t {
-    volatile int16_t n;
-    volatile int16_t c_n;
-    int16_t n_target_accel;
-    int16_t n_start_decel;
+    volatile int32_t n;
+    volatile int32_t c_n;
+    int32_t n_target_accel;
+    int32_t n_start_decel;
     enum traj_trapez_state_t state;
 };
 
