@@ -1,8 +1,8 @@
 #include "traj_trapez.h"
 
 void traj_trapez_prime(struct traj_trapez_t *traj, struct traj_trapez_init_t *init) {
-    traj->c_n = init->f * sqrtf(2 * ALPHA / init->accel);
-    traj->n_target_accel = (init->vel_target*init->vel_target) / (ALPHA2 * init->accel);
+    traj->c_n = MAGIC * init->f * sqrtf(2 * ALPHA / init->accel);
+    traj->n_target_accel = (init->vel_target*init->vel_target) / (2*ALPHA * init->accel);
     traj->n_start_decel = -(int32_t)(traj->n_target_accel * init->accel / init->decel);
     traj->state = TRAJ_TRAPEZ_STATE_STOP;
 }
@@ -35,12 +35,16 @@ void traj_trapez_advance(struct traj_trapez_t *traj) {
 void traj_trapez_execute_cmd(struct traj_trapez_t *traj, enum traj_trapez_cmd_t cmd) {
     switch (cmd) {
         case TRAJ_TRAPEZ_CMD_ACCELERATE:
-            traj->n = 1;
-            traj->state = TRAJ_TRAPEZ_STATE_ACCEL;
+            if (traj->state == TRAJ_TRAPEZ_STATE_STOP) {
+                traj->n = 1;
+                traj->state = TRAJ_TRAPEZ_STATE_ACCEL;
+            }
             break;
         case TRAJ_TRAPEZ_CMD_DECELERATE:
-            traj->n = traj->n_start_decel;
-            traj->state = TRAJ_TRAPEZ_STATE_DECEL;
+            if (traj->state == TRAJ_TRAPEZ_STATE_RUN) {
+                traj->n = traj->n_start_decel;
+                traj->state = TRAJ_TRAPEZ_STATE_DECEL;
+            }
             break;
         default:
             return;

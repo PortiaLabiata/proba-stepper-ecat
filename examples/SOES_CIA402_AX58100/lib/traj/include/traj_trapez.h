@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 #define ALPHA   1.8
-#define ALPHA2  ALPHA*2
+#define MAGIC   0.676
 
 enum traj_trapez_state_t {
     TRAJ_TRAPEZ_STATE_STOP,
