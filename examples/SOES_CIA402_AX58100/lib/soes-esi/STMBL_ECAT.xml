@@ -158,6 +158,30 @@
                 </SubItem>
               </DataType>
               <DataType>
+                <Name>DT1602</Name>
+                <BitSize>48</BitSize>
+                <SubItem>
+                  <SubIdx>0</SubIdx>
+                  <Name>Max SubIndex</Name>
+                  <Type>USINT</Type>
+                  <BitSize>8</BitSize>
+                  <BitOffs>0</BitOffs>
+                  <Flags>
+                    <Access>ro</Access>
+                  </Flags>
+                </SubItem>
+                <SubItem>
+                  <SubIdx>1</SubIdx>
+                  <Name>Target velocity</Name>
+                  <Type>UDINT</Type>
+                  <BitSize>32</BitSize>
+                  <BitOffs>16</BitOffs>
+                  <Flags>
+                    <Access>ro</Access>
+                  </Flags>
+                </SubItem>
+              </DataType>
+              <DataType>
                 <Name>DT1A00</Name>
                 <BitSize>48</BitSize>
                 <SubItem>
@@ -206,6 +230,30 @@
                 </SubItem>
               </DataType>
               <DataType>
+                <Name>DT1A02</Name>
+                <BitSize>48</BitSize>
+                <SubItem>
+                  <SubIdx>0</SubIdx>
+                  <Name>Max SubIndex</Name>
+                  <Type>USINT</Type>
+                  <BitSize>8</BitSize>
+                  <BitOffs>0</BitOffs>
+                  <Flags>
+                    <Access>ro</Access>
+                  </Flags>
+                </SubItem>
+                <SubItem>
+                  <SubIdx>1</SubIdx>
+                  <Name>Velocity actual</Name>
+                  <Type>UDINT</Type>
+                  <BitSize>32</BitSize>
+                  <BitOffs>16</BitOffs>
+                  <Flags>
+                    <Access>ro</Access>
+                  </Flags>
+                </SubItem>
+              </DataType>
+              <DataType>
                 <Name>DT1C00ARR</Name>
                 <BaseType>USINT</BaseType>
                 <BitSize>32</BitSize>
@@ -240,15 +288,15 @@
               <DataType>
                 <Name>DT1C12ARR</Name>
                 <BaseType>UINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>48</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>2</Elements>
+                  <Elements>3</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT1C12</Name>
-                <BitSize>48</BitSize>
+                <BitSize>64</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -262,7 +310,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT1C12ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>48</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access>ro</Access>
@@ -272,15 +320,15 @@
               <DataType>
                 <Name>DT1C13ARR</Name>
                 <BaseType>UINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>48</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>2</Elements>
+                  <Elements>3</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT1C13</Name>
-                <BitSize>48</BitSize>
+                <BitSize>64</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -294,7 +342,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT1C13ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>48</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access>ro</Access>
@@ -611,7 +659,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>rw</Access>
+                  <Access>ro</Access>
                 </Flags>
               </Object>
               <Object>
@@ -630,6 +678,29 @@
                     <Name>Target position</Name>
                     <Info>
                       <DefaultValue>#x607A0020</DefaultValue>
+                    </Info>
+                  </SubItem>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
+                <Index>#x1602</Index>
+                <Name>Target velocity</Name>
+                <Type>DT1602</Type>
+                <BitSize>48</BitSize>
+                <Info>
+                  <SubItem>
+                    <Name>Max SubIndex</Name>
+                    <Info>
+                      <DefaultValue>1</DefaultValue>
+                    </Info>
+                  </SubItem>
+                  <SubItem>
+                    <Name>Target velocity</Name>
+                    <Info>
+                      <DefaultValue>#x60FF0020</DefaultValue>
                     </Info>
                   </SubItem>
                 </Info>
@@ -684,6 +755,29 @@
                 </Flags>
               </Object>
               <Object>
+                <Index>#x1A02</Index>
+                <Name>Velocity actual</Name>
+                <Type>DT1A02</Type>
+                <BitSize>48</BitSize>
+                <Info>
+                  <SubItem>
+                    <Name>Max SubIndex</Name>
+                    <Info>
+                      <DefaultValue>1</DefaultValue>
+                    </Info>
+                  </SubItem>
+                  <SubItem>
+                    <Name>Velocity actual</Name>
+                    <Info>
+                      <DefaultValue>#x606C0020</DefaultValue>
+                    </Info>
+                  </SubItem>
+                </Info>
+                <Flags>
+                  <Access>ro</Access>
+                </Flags>
+              </Object>
+              <Object>
                 <Index>#x1C00</Index>
                 <Name>Sync Manager Communication Type</Name>
                 <Type>DT1C00</Type>
@@ -728,12 +822,12 @@
                 <Index>#x1C12</Index>
                 <Name>Sync Manager 2 PDO Assignment</Name>
                 <Type>DT1C12</Type>
-                <BitSize>48</BitSize>
+                <BitSize>64</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>2</DefaultValue>
+                      <DefaultValue>3</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -748,6 +842,12 @@
                       <DefaultValue>#x1601</DefaultValue>
                     </Info>
                   </SubItem>
+                  <SubItem>
+                    <Name>PDO Mapping</Name>
+                    <Info>
+                      <DefaultValue>#x1602</DefaultValue>
+                    </Info>
+                  </SubItem>
                 </Info>
                 <Flags>
                   <Access>ro</Access>
@@ -757,12 +857,12 @@
                 <Index>#x1C13</Index>
                 <Name>Sync Manager 3 PDO Assignment</Name>
                 <Type>DT1C13</Type>
-                <BitSize>48</BitSize>
+                <BitSize>64</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>2</DefaultValue>
+                      <DefaultValue>3</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -775,6 +875,12 @@
                     <Name>PDO Mapping</Name>
                     <Info>
                       <DefaultValue>#x1A01</DefaultValue>
+                    </Info>
+                  </SubItem>
+                  <SubItem>
+                    <Name>PDO Mapping</Name>
+                    <Info>
+                      <DefaultValue>#x1A02</DefaultValue>
                     </Info>
                   </SubItem>
                 </Info>
@@ -885,7 +991,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                   <PdoMapping>R</PdoMapping>
                 </Flags>
               </Object>
@@ -916,7 +1022,7 @@
               </Object>
               <Object>
                 <Index>#x6061</Index>
-                <Name>Mode of operation display</Name>
+                <Name>Modes of operation display</Name>
                 <Type>SINT</Type>
                 <BitSize>8</BitSize>
                 <Info>
@@ -949,6 +1055,7 @@
                 </Info>
                 <Flags>
                   <Access>ro</Access>
+                  <PdoMapping>T</PdoMapping>
                 </Flags>
               </Object>
               <Object>
@@ -998,6 +1105,7 @@
                 </Info>
                 <Flags>
                   <Access>rw</Access>
+                  <PdoMapping>R</PdoMapping>
                 </Flags>
               </Object>
               <Object>
@@ -1044,6 +1152,17 @@
             <DataType>UDINT</DataType>
           </Entry>
         </RxPdo>
+        <RxPdo Fixed="true" Mandatory="true" Sm="2">
+          <Index>#x1602</Index>
+          <Name>Target velocity</Name>
+          <Entry>
+            <Index>#x60FF</Index>
+            <SubIndex>#x0</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Target velocity</Name>
+            <DataType>DINT</DataType>
+          </Entry>
+        </RxPdo>
         <TxPdo Fixed="true" Mandatory="true" Sm="3">
           <Index>#x1A00</Index>
           <Name>Status Word</Name>
@@ -1064,6 +1183,17 @@
             <BitLen>32</BitLen>
             <Name>Position actual</Name>
             <DataType>UDINT</DataType>
+          </Entry>
+        </TxPdo>
+        <TxPdo Fixed="true" Mandatory="true" Sm="3">
+          <Index>#x1A02</Index>
+          <Name>Velocity actual</Name>
+          <Entry>
+            <Index>#x606C</Index>
+            <SubIndex>#x0</SubIndex>
+            <BitLen>32</BitLen>
+            <Name>Velocity actual</Name>
+            <DataType>DINT</DataType>
           </Entry>
         </TxPdo>
         <Mailbox DataLinkLayer="true">
