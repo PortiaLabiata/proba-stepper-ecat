@@ -164,7 +164,7 @@ const _objd SDO1C33[] =
 };
 const _objd SDO6040[] =
 {
-  {0x0, DTYPE_UNSIGNED16, 16, ATYPE_RO | ATYPE_RXPDO, acName6040, 0, &Obj.Control_Word},
+  {0x0, DTYPE_UNSIGNED16, 16, ATYPE_RW | ATYPE_RXPDO, acName6040, 0, &Obj.Control_Word},
 };
 const _objd SDO6041[] =
 {
@@ -172,7 +172,7 @@ const _objd SDO6041[] =
 };
 const _objd SDO6060[] =
 {
-  {0x0, DTYPE_INTEGER8, 8, ATYPE_RO, acName6060, 0, &Obj.Modes_of_operation},
+  {0x0, DTYPE_INTEGER8, 8, ATYPE_RW, acName6060, 0, &Obj.Modes_of_operation},
 };
 const _objd SDO6061[] =
 {
@@ -188,19 +188,19 @@ const _objd SDO606C[] =
 };
 const _objd SDO607A[] =
 {
-  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO | ATYPE_RXPDO, acName607A, 0, &Obj.Target_position},
+  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RW | ATYPE_RXPDO, acName607A, 0, &Obj.Target_position},
 };
 const _objd SDO6083[] =
 {
-  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO, acName6083, 0, &Obj.Profile_acceleration},
+  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RW, acName6083, 0, &Obj.Profile_acceleration},
 };
 const _objd SDO6084[] =
 {
-  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RO, acName6084, 0, &Obj.Profile_deceleration},
+  {0x0, DTYPE_UNSIGNED32, 32, ATYPE_RW, acName6084, 0, &Obj.Profile_deceleration},
 };
 const _objd SDO60FF[] =
 {
-  {0x0, DTYPE_INTEGER32, 32, ATYPE_RO, acName60FF, 0, &Obj.Target_velocity},
+  {0x0, DTYPE_INTEGER32, 32, ATYPE_RW, acName60FF, 0, &Obj.Target_velocity},
 };
 const _objd SDO6502[] =
 {

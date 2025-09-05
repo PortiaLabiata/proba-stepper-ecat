@@ -23,14 +23,20 @@ struct traj_trapez_init_t {
     uint32_t accel;
     uint32_t decel;
     uint32_t vel_target;
+
+    int32_t pos_target;
+    bool mode_pp;
 };
 
 struct traj_trapez_t {
     volatile int32_t n;
     volatile int32_t c_n;
+
     int32_t n_target_accel;
     int32_t n_start_decel;
+
     enum traj_trapez_state_t state;
+    bool mode_pp;
 };
 
 void traj_trapez_prime(struct traj_trapez_t *traj, struct traj_trapez_init_t *init);

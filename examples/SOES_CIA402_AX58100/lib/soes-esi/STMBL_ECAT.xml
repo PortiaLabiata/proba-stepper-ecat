@@ -611,7 +611,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -911,7 +911,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -960,7 +960,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                   <PdoMapping>R</PdoMapping>
                 </Flags>
               </Object>
@@ -973,7 +973,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -985,7 +985,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -997,7 +997,7 @@
                   <DefaultValue>0</DefaultValue>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>

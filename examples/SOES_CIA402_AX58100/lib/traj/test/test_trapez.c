@@ -6,13 +6,13 @@ void traj_test(struct traj_trapez_t *traj, struct traj_trapez_init_t *init, int 
 int main(int argc, char **argv) {
     struct traj_trapez_t traj;
     struct traj_trapez_init_t init = {
-        .accel = 10,
+        .accel = 3,
         .decel = 10,
         .f = 1000000,
         .vel_target = 30
     };
     traj_trapez_prime(&traj, &init);
-    traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
+    //traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
     traj_test(&traj, &init, 100);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_DECELERATE);
     traj_test(&traj, &init, 30);
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 
     traj_trapez_prime(&traj, &init);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_ACCELERATE);
-    traj_test(&traj, &init, 100);
+    traj_test(&traj, &init, 9);
     traj_trapez_execute_cmd(&traj, TRAJ_TRAPEZ_CMD_DECELERATE);
     traj_test(&traj, &init, 30);
 }
