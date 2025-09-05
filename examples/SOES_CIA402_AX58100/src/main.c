@@ -8,8 +8,6 @@
 #include "ecatapp.h"
 #include "stepper.h"
 
-#include "arm_math.h"
-
 void stp_isr_callback(void);
 void stp_ll_config(void);
 
