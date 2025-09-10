@@ -14,12 +14,14 @@ typedef struct
    /* Inputs */
 
    uint16_t Status_Word;
+   int8_t Modes_of_operation_display;
    uint32_t Position_actual;
    int32_t Velocity_actual;
 
    /* Outputs */
 
    uint16_t Control_Word;
+   int8_t Modes_of_operation;
    uint32_t Target_position;
    int32_t Target_velocity;
 
@@ -47,8 +49,6 @@ typedef struct
       uint16_t Sync_modes_supported;
       uint32_t Minimum_Cycle_Time;
    } Sync_Manager_3_Parameters;
-   int8_t Modes_of_operation;
-   int8_t Modes_of_operation_display;
    uint32_t Profile_acceleration;
    uint32_t Profile_deceleration;
    uint32_t Supported_drive_modes;

@@ -6,10 +6,26 @@
 #include "esc.h"
 #include "ecat_slv.h"
 #include "ecatapp.h"
+
 #include "stepper.h"
+#include "traj_trapez.h"
 
 void stp_isr_callback(void);
 void stp_ll_config(void);
+
+struct stp_t stp = {
+	.en_pin = {
+		.port = GPIOA,
+		.pin = PIN_NUM_10
+	},
+	.dir_pin = {
+		.port = GPIOA,
+		.pin = PIN_NUM_9
+	},
+	.tim = TIM1
+};
+
+struct traj_trapez_t traj;
 
 int main(void)
 {
@@ -21,24 +37,18 @@ int main(void)
 
 	stp_ll_config();
 
-	struct stp_t stp = {
-		.en_pin = {
-			.port = GPIOA,
-			.pin = PIN_NUM_10
-		},
-		.dir_pin = {
-			.port = GPIOA,
-			.pin = PIN_NUM_9
-		},
-		.tim = TIM1
-	};
-
 	stp_init(&stp);
-	stp_register(&stp);
-	//stp_enable(&stp);
+	stp_register_isr_callback(&stp, stp_isr_callback);
 
-	while (1)
-	{
+	struct traj_trapez_init_t init = {
+		.accel = 720,
+		.decel = 720,
+		.f = 1000000,
+		.vel_target = 1440
+	};
+	//traj_trapez_prime(&traj, &init);
+
+	while (1) {
         ecatapp_loop();
 	}
 }
@@ -52,8 +62,24 @@ void stp_ll_config(void) {
 	GPIOA->AFR[1] |= GPIO_AF_TIM1;
 
 	GPIOA->MODER |= (GPIO_MODER_MODER9_0 | GPIO_MODER_MODER10_0);
+
+	NVIC_SetPriority(TIM1_CC_IRQn, 0);
+	NVIC_EnableIRQ(TIM1_CC_IRQn);
+}
+
+void TIM1_CC_IRQHandler(void) {
+	stp.tim->SR &= ~TIM_SR_CC1IF;
+	stp.isr_callback();
 }
 
 void stp_isr_callback(void) {
-	asm("nop");
+	if (traj_is_running(&traj)) {
+		stp_enable(&stp);
+	} else {
+		stp_disable(&stp);
+	}
+
+	stp.tim->ARR = traj.c_n - 1;
+	stp.tim->CCR1 = traj.c_n / 2 - 1;
+	traj_trapez_advance(&traj);
 }

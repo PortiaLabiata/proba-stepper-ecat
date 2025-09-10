@@ -3,8 +3,10 @@
 #include <math.h>
 #include <stdbool.h>
 
-#define ALPHA   1.8
+#define ALPHA   1.8 / 4
 #define MAGIC   0.676
+
+#define traj_is_running(__TRAJ_PTR__) ((__TRAJ_PTR__)->state != TRAJ_TRAPEZ_STATE_STOP)
 
 enum traj_trapez_state_t {
     TRAJ_TRAPEZ_STATE_STOP,

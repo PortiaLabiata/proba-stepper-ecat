@@ -11,8 +11,15 @@
 #define pin_set(__PIN__) (__PIN__.port->ODR &= ~(0x1 << (uint32_t)(__PIN__.pin)))
 #define pin_reset(__PIN__) (__PIN__.port->ODR |= (0x1 << (uint32_t)(__PIN__.pin)))
 
-#define stp_enable(__STP__) (pin_set((__STP__)->en_pin))
-#define stp_disable(__STP__) (pin_reset((__STP__)->en_pin))
+#define stp_enable(__STP__) do { \
+    (pin_set((__STP__)->en_pin)); \
+    (__STP__)->enabled = true; } while (0)
+
+#define stp_disable(__STP__) do { \
+    (pin_reset((__STP__)->en_pin)); \
+    (__STP__)->enabled = false; } while (0)
+
+#define stp_is_enabled(__STP__) ((__STP__)->enabled)
 
 #define stp_setdir_clockwise(__STP__) (pin_set((__STP__)->dir_pin))
 #define stp_setdir_counterclockwise(__STP__) (pin_reset((__STP__)->dir_pin))
@@ -50,6 +57,7 @@ struct stp_t {
 	struct stp_pin_t en_pin;
 	struct stp_pin_t dir_pin;
 	TIM_TypeDef *tim;
+    bool enabled;
     void (*isr_callback)(void);
 };
 

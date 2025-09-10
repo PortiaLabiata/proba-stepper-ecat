@@ -44,28 +44,10 @@
         "isSDOitem": true,
         "data": "&Obj.Error_register"
       },
-      "6060": {
-        "otype": "VAR",
-        "name": "Modes of operation",
-        "access": "RO",
-        "dtype": "INTEGER8",
-        "value": "0",
-        "isSDOitem": true,
-        "data": "&Obj.Modes_of_operation"
-      },
-      "6061": {
-        "otype": "VAR",
-        "name": "Modes of operation display",
-        "access": "RO",
-        "dtype": "INTEGER8",
-        "value": "0",
-        "isSDOitem": true,
-        "data": "&Obj.Modes_of_operation_display"
-      },
       "6083": {
         "otype": "VAR",
         "name": "Profile acceleration",
-        "access": "RO",
+        "access": "RW",
         "dtype": "UNSIGNED32",
         "value": "0",
         "isSDOitem": true,
@@ -74,7 +56,7 @@
       "6084": {
         "otype": "VAR",
         "name": "Profile deceleration",
-        "access": "RO",
+        "access": "RW",
         "dtype": "UNSIGNED32",
         "value": "0",
         "isSDOitem": true,
@@ -85,7 +67,7 @@
         "name": "Supported drive modes",
         "access": "RO",
         "dtype": "UNSIGNED32",
-        "value": "0",
+        "value": "37",
         "isSDOitem": true,
         "data": "&Obj.Supported_drive_modes"
       },
@@ -229,6 +211,17 @@
         "value": "0",
         "data": "&Obj.Status_Word"
       },
+      "6061": {
+        "otype": "VAR",
+        "name": "Modes of operation display",
+        "access": "RO",
+        "dtype": "INTEGER8",
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "value": "0",
+        "data": "&Obj.Modes_of_operation_display"
+      },
       "6064": {
         "otype": "VAR",
         "name": "Position actual",
@@ -256,7 +249,7 @@
       "6040": {
         "otype": "VAR",
         "name": "Control Word",
-        "access": "RO",
+        "access": "RW",
         "pdo_mappings": [
           "rxpdo"
         ],
@@ -264,10 +257,21 @@
         "value": "0",
         "data": "&Obj.Control_Word"
       },
+      "6060": {
+        "otype": "VAR",
+        "name": "Modes of operation",
+        "access": "RW",
+        "dtype": "INTEGER8",
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "value": "0",
+        "data": "&Obj.Modes_of_operation"
+      },
       "607A": {
         "otype": "VAR",
         "name": "Target position",
-        "access": "RO",
+        "access": "RW",
         "pdo_mappings": [
           "rxpdo"
         ],
@@ -278,7 +282,7 @@
       "60FF": {
         "otype": "VAR",
         "name": "Target velocity",
-        "access": "RO",
+        "access": "RW",
         "dtype": "INTEGER32",
         "pdo_mappings": [
           "rxpdo"
