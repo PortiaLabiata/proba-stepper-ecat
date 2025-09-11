@@ -66,6 +66,15 @@
 #define CIA402_STATUSWORD_CSP_DRIVE_FOLLOWS_COMMAND                0x1000
 #define CIA402_STATUSWORD_CSP_FOLLOWING_ERROR                      0x2000
 
+#define CIA402_MODE_PV                                             (3)
+#define CIA402_MODE_PP                                             (1)
+#define CIA402_MODE_HM                                             (6)
+
+#define CIA402_STATUSWORD_PV_TARGET_REACHED                        (1 << 10)
+#define CIA402_STATUSWORD_PV_SPEED_ZERO                            (1 << 12)
+
+#define CIA402_STATUSWORD_PP_TARGET_REACHED                        (1 << 10)
+
 
 enum cia402_controlword_command_t {
     SHUTDOWN_CMD,

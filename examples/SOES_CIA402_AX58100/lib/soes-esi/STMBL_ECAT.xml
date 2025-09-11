@@ -707,7 +707,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -730,7 +730,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -753,7 +753,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -776,7 +776,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -799,7 +799,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -822,7 +822,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -845,7 +845,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -868,7 +868,7 @@
                   </SubItem>
                 </Info>
                 <Flags>
-                  <Access>ro</Access>
+                  <Access>rw</Access>
                 </Flags>
               </Object>
               <Object>
@@ -1222,7 +1222,7 @@
                 <Type>UDINT</Type>
                 <BitSize>32</BitSize>
                 <Info>
-                  <DefaultValue>37</DefaultValue>
+                  <DefaultValue>5</DefaultValue>
                 </Info>
                 <Flags>
                   <Access>ro</Access>

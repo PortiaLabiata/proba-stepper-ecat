@@ -67,7 +67,7 @@
         "name": "Supported drive modes",
         "access": "RO",
         "dtype": "UNSIGNED32",
-        "value": "37",
+        "value": "5",
         "isSDOitem": true,
         "data": "&Obj.Supported_drive_modes"
       },

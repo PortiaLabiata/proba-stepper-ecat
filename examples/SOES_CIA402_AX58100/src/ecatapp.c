@@ -108,7 +108,7 @@ uint16_t check_dc_handler (void)
 void ecatapp()
 {
     cia402_state_machine(&cia402axis, Obj.Control_Word);
-	Obj.Modes_of_operation_display = Obj.Modes_of_operation;
+    Obj.Modes_of_operation_display = Obj.Modes_of_operation;
 }
 
 
@@ -129,6 +129,8 @@ void app_cia402_init(void)
     /* Match CiA 402 objects to used CoE Object Dictionary implementation */
     cia402axis.statusword = &Obj.Status_Word;
     cia402axis.ALstatus = &ESCvar.ALstatus;
+    //Obj.Modes_of_operation_display = CIA402_MODE_PP;
+    //*(cia402axis.statusword) |= CIA402_STATUSWORD_PP_TARGET_REACHED;
 }
 
 
@@ -136,6 +138,7 @@ void app_cia402_mc()
 {
     // TODO motion control here
     Obj.Position_actual = Obj.Target_position; // dummy loopback
+    Obj.Velocity_actual = Obj.Target_velocity;
     // csp is the only supported mode for now
     *(cia402axis.statusword) |= CIA402_STATUSWORD_CSP_DRIVE_FOLLOWS_COMMAND;
 }
