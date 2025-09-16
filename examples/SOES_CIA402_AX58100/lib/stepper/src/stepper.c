@@ -85,9 +85,9 @@ void stp_init(struct stp_t *stp) {
 	}
 
 	/* Начальная конфигурация ARR */
-	stp->tim->ARR = 10000 - 1;
+	stp->tim->ARR = 5000 - 1;
 	stp->tim->CCMR1 |= TIM_CCMR1_OC1M_0 | TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_2; // Режим ШИМ 2
-	stp->tim->CCER |= TIM_CCER_CC1E; // Включаем первый канал
+	//stp->tim->CCER |= TIM_CCER_CC1E; // Включаем первый канал
 	stp->tim->CCR1 = stp->tim->ARR / 2 - 1;
 	stp->tim->DIER |= TIM_DIER_CC1IE;
 	stp->tim->EGR |= TIM_EGR_UG;

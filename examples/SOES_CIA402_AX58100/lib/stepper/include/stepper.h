@@ -21,10 +21,16 @@
 
 #define stp_is_enabled(__STP__) ((__STP__)->enabled)
 
+#define stp_stop_pulses(__STP__) ((__STP__)->tim->CCER &= ~(TIM_CCER_CC1E))
+#define stp_start_pulses(__STP__) ((__STP__)->tim->CCER |= TIM_CCER_CC1E)
+
 #define stp_setdir_clockwise(__STP__) (pin_set((__STP__)->dir_pin))
 #define stp_setdir_counterclockwise(__STP__) (pin_reset((__STP__)->dir_pin))
 
-#define stp_set_period_us(__STP__, __PERIOD_US__) ((__STP__)->tim->ARR = __PERIOD_US__)
+#define stp_set_period_us(__STP__, __PERIOD_US__) do { \
+    (__STP__)->tim->ARR = __PERIOD_US__;\
+    (__STP__)->tim->CCR1 = __PERIOD_US__ / 2 - 1;} while (0)
+
 #define stp_get_period_us(__STP__) ((__STP__)->tim->ARR)
 
 /* Typedefs */

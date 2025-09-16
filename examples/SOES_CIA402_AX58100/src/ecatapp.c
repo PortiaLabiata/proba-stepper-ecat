@@ -95,10 +95,9 @@ void ecatapp_init(void) {
     ecat_slv_init(&config);
     cia402_init(&cia402axis);
 	init_override();
-}
 
-void stepper_init(void) {
     stp_init(&stp);
+    stp_enable(&stp);
 }
 
 uint16_t check_dc_handler (void)
@@ -158,6 +157,21 @@ void app_cia402_mc()
     // TODO motion control here
     Obj.Position_actual = Obj.Target_position; // dummy loopback
     Obj.Velocity_actual = Obj.Target_velocity;
+
+    // TODO: Заменить всё это на хуки
+    if (cia402axis.state == OPERATION_ENABLED || cia402axis.state == QUICK_STOP_ACTIVE || \
+            cia402axis.state == FAULT_REACTION_ACTIVE) {
+        stp_enable(&stp);
+    } else {
+        stp_disable(&stp);
+    }
+
+    if (abs(Obj.Velocity_actual) > 65535) {
+        stp_start_pulses(&stp);
+    } else {
+        stp_stop_pulses(&stp);
+    }
+    
     int32_t vel_int = Obj.Target_velocity / 65535;
     if (vel_int < 0) {
         stp_setdir_clockwise(&stp);
