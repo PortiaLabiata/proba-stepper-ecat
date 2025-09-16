@@ -97,7 +97,7 @@ void ecatapp_init(void) {
 	init_override();
 
     stp_init(&stp);
-    stp_enable(&stp);
+    //stp_enable(&stp);
 }
 
 uint16_t check_dc_handler (void)
