@@ -65,6 +65,10 @@ bool stp_register(struct stp_t *stp) {
 	return true;
 }
 
+static void dummy(void) {
+
+}
+
 // TODO: Добавить проверки на NULL и так далее
 void stp_init(struct stp_t *stp) {
 	stp_disable(stp);
@@ -88,6 +92,8 @@ void stp_init(struct stp_t *stp) {
 	stp->tim->DIER |= TIM_DIER_CC1IE;
 	stp->tim->EGR |= TIM_EGR_UG;
 	stp->tim->CR1 |= TIM_CR1_CEN;
+
+	stp->isr_callback = dummy;
 }
 
 void stp_register_isr_callback(struct stp_t *stp, void (*callback)(void)) {

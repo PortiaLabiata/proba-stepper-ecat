@@ -13,18 +13,6 @@
 void stp_isr_callback(void);
 void stp_ll_config(void);
 
-struct stp_t stp = {
-	.en_pin = {
-		.port = GPIOA,
-		.pin = PIN_NUM_10
-	},
-	.dir_pin = {
-		.port = GPIOA,
-		.pin = PIN_NUM_9
-	},
-	.tim = TIM1
-};
-
 struct traj_trapez_t traj;
 
 int main(void)
@@ -32,20 +20,10 @@ int main(void)
   	SysTick_Config(SystemCoreClock / 1000);
 	APP_USART_Init();
 	delay_init(); 
+	stp_ll_config();
     STM_EVAL_PBInit(BUTTON_MODE_GPIO);
     ecatapp_init();
 
-	stp_ll_config();
-
-	stp_init(&stp);
-	stp_register_isr_callback(&stp, stp_isr_callback);
-
-	struct traj_trapez_init_t init = {
-		.accel = 720,
-		.decel = 720,
-		.f = 1000000,
-		.vel_target = 1440
-	};
 	//traj_trapez_prime(&traj, &init);
 
 	while (1) {
@@ -67,11 +45,7 @@ void stp_ll_config(void) {
 	NVIC_EnableIRQ(TIM1_CC_IRQn);
 }
 
-void TIM1_CC_IRQHandler(void) {
-	stp.tim->SR &= ~TIM_SR_CC1IF;
-	stp.isr_callback();
-}
-
+/* 
 void stp_isr_callback(void) {
 	if (traj_is_running(&traj)) {
 		stp_enable(&stp);
@@ -82,4 +56,4 @@ void stp_isr_callback(void) {
 	stp.tim->ARR = traj.c_n - 1;
 	stp.tim->CCR1 = traj.c_n / 2 - 1;
 	traj_trapez_advance(&traj);
-}
+} */

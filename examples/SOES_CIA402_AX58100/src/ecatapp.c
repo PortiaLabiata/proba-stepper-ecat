@@ -8,6 +8,7 @@
 #include "pdo_override.h"
 #include "cia402device.h"
 #include "ecatapp.h"
+#include "stepper.h"
 
 /* CANopen Object Dictionary */
 _Objects    Obj;
@@ -51,6 +52,19 @@ cia402_axis_t cia402axis = {
     .motion_control_hook       = app_cia402_mc,
 };
 
+
+struct stp_t stp = {
+	.en_pin = {
+		.port = GPIOA,
+		.pin = PIN_NUM_10
+	},
+	.dir_pin = {
+		.port = GPIOA,
+		.pin = PIN_NUM_9
+	},
+	.tim = TIM1
+};
+
 // **************************************************************
 
 static uint8_t sync0_irq_flag = 0;
@@ -80,6 +94,10 @@ void ecatapp_init(void) {
     ecat_slv_init(&config);
     cia402_init(&cia402axis);
 	init_override();
+}
+
+void stepper_init(void) {
+    stp_init(&stp);
 }
 
 uint16_t check_dc_handler (void)
@@ -139,6 +157,7 @@ void app_cia402_mc()
     // TODO motion control here
     Obj.Position_actual = Obj.Target_position; // dummy loopback
     Obj.Velocity_actual = Obj.Target_velocity;
+    stp_set_period_us(&stp, 1000000 / Obj.Velocity_actual);
     // csp is the only supported mode for now
     *(cia402axis.statusword) |= CIA402_STATUSWORD_CSP_DRIVE_FOLLOWS_COMMAND;
 }
@@ -165,4 +184,9 @@ void ecatapp_loop(void)
         ecat_slv_poll();
         DIG_process(DIG_PROCESS_WD_FLAG);
     }
+}
+
+void TIM1_CC_IRQHandler(void) {
+	stp.tim->SR &= ~TIM_SR_CC1IF;
+	stp.isr_callback();
 }

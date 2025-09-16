@@ -44,30 +44,30 @@
         "isSDOitem": true,
         "data": "&Obj.Error_register"
       },
-      "6083": {
+      "6060": {
         "otype": "VAR",
-        "name": "Profile acceleration",
+        "name": "Modes of operation",
         "access": "RW",
-        "dtype": "UNSIGNED32",
+        "dtype": "INTEGER8",
         "value": "0",
         "isSDOitem": true,
-        "data": "&Obj.Profile_acceleration"
+        "data": "&Obj.Modes_of_operation"
       },
-      "6084": {
+      "6061": {
         "otype": "VAR",
-        "name": "Profile deceleration",
-        "access": "RW",
-        "dtype": "UNSIGNED32",
+        "name": "Modes of operation display",
+        "access": "RO",
+        "dtype": "INTEGER8",
         "value": "0",
         "isSDOitem": true,
-        "data": "&Obj.Profile_deceleration"
+        "data": "&Obj.Modes_of_operation_display"
       },
       "6502": {
         "otype": "VAR",
         "name": "Supported drive modes",
         "access": "RO",
         "dtype": "UNSIGNED32",
-        "value": "5",
+        "value": "0",
         "isSDOitem": true,
         "data": "&Obj.Supported_drive_modes"
       },
@@ -211,17 +211,6 @@
         "value": "0",
         "data": "&Obj.Status_Word"
       },
-      "6061": {
-        "otype": "VAR",
-        "name": "Modes of operation display",
-        "access": "RO",
-        "dtype": "INTEGER8",
-        "pdo_mappings": [
-          "txpdo"
-        ],
-        "value": "0",
-        "data": "&Obj.Modes_of_operation_display"
-      },
       "6064": {
         "otype": "VAR",
         "name": "Position actual",
@@ -229,7 +218,7 @@
         "pdo_mappings": [
           "txpdo"
         ],
-        "dtype": "UNSIGNED32",
+        "dtype": "INTEGER32",
         "value": "0",
         "data": "&Obj.Position_actual"
       },
@@ -257,28 +246,6 @@
         "value": "0",
         "data": "&Obj.Control_Word"
       },
-      "6060": {
-        "otype": "VAR",
-        "name": "Modes of operation",
-        "access": "RW",
-        "dtype": "INTEGER8",
-        "pdo_mappings": [
-          "rxpdo"
-        ],
-        "value": "0",
-        "data": "&Obj.Modes_of_operation"
-      },
-      "607A": {
-        "otype": "VAR",
-        "name": "Target position",
-        "access": "RW",
-        "pdo_mappings": [
-          "rxpdo"
-        ],
-        "dtype": "UNSIGNED32",
-        "value": "0",
-        "data": "&Obj.Target_position"
-      },
       "60FF": {
         "otype": "VAR",
         "name": "Target velocity",
@@ -289,6 +256,17 @@
         ],
         "value": "0",
         "data": "&Obj.Target_velocity"
+      },
+      "607A": {
+        "otype": "VAR",
+        "name": "Target position",
+        "access": "RW",
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "dtype": "INTEGER32",
+        "value": "0",
+        "data": "&Obj.Target_position"
       }
     }
   },
