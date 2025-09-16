@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "usart.h"
 
 #include "esc.h"
@@ -157,7 +158,13 @@ void app_cia402_mc()
     // TODO motion control here
     Obj.Position_actual = Obj.Target_position; // dummy loopback
     Obj.Velocity_actual = Obj.Target_velocity;
-    stp_set_period_us(&stp, 1000000 / Obj.Velocity_actual);
+    int32_t vel_int = Obj.Target_velocity / 65535;
+    if (vel_int < 0) {
+        stp_setdir_clockwise(&stp);
+    } else {
+        stp_setdir_counterclockwise(&stp);
+    }
+    stp_set_period_us(&stp, 1000000 / abs(vel_int));
     // csp is the only supported mode for now
     *(cia402axis.statusword) |= CIA402_STATUSWORD_CSP_DRIVE_FOLLOWS_COMMAND;
 }
