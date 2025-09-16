@@ -15,11 +15,13 @@ typedef struct
 
    uint16_t Status_Word;
    uint32_t Position_actual;
+   int32_t Velocity_actual;
 
    /* Outputs */
 
    uint16_t Control_Word;
    uint32_t Target_position;
+   int32_t Target_velocity;
 
    /* Parameters */
 
@@ -47,10 +49,8 @@ typedef struct
    } Sync_Manager_3_Parameters;
    int8_t Modes_of_operation;
    int8_t Mode_of_operation_display;
-   int32_t Velocity_actual;
    uint32_t Profile_acceleration;
    uint32_t Profile_deceleration;
-   int32_t Target_velocity;
    uint32_t Supported_drive_modes;
 } _Objects;
 

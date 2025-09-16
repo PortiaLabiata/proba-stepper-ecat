@@ -215,24 +215,6 @@
           }
         ],
         "isSDOitem": true
-      },
-      "60FF": {
-        "otype": "VAR",
-        "name": "Target velocity",
-        "access": "RO",
-        "dtype": "INTEGER32",
-        "value": "0",
-        "isSDOitem": true,
-        "data": "&Obj.Target_velocity"
-      },
-      "606C": {
-        "otype": "VAR",
-        "name": "Velocity actual",
-        "access": "RO",
-        "dtype": "INTEGER32",
-        "value": "0",
-        "isSDOitem": true,
-        "data": "&Obj.Velocity_actual"
       }
     },
     "txpdo": {
@@ -257,6 +239,17 @@
         "dtype": "UNSIGNED32",
         "value": "0",
         "data": "&Obj.Position_actual"
+      },
+      "606C": {
+        "otype": "VAR",
+        "name": "Velocity actual",
+        "access": "RO",
+        "dtype": "INTEGER32",
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "value": "0",
+        "data": "&Obj.Velocity_actual"
       }
     },
     "rxpdo": {
@@ -281,6 +274,17 @@
         "dtype": "UNSIGNED32",
         "value": "0",
         "data": "&Obj.Target_position"
+      },
+      "60FF": {
+        "otype": "VAR",
+        "name": "Target velocity",
+        "access": "RO",
+        "dtype": "INTEGER32",
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "value": "0",
+        "data": "&Obj.Target_velocity"
       }
     }
   },
