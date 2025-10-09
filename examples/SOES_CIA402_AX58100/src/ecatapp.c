@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <math.h>
 #include "usart.h"
 
 #include "esc.h"
@@ -10,6 +11,7 @@
 #include "cia402device.h"
 #include "ecatapp.h"
 #include "stepper.h"
+#include "encoder.h"
 
 /* CANopen Object Dictionary */
 _Objects    Obj;
@@ -66,6 +68,10 @@ struct stp_t stp = {
 	.tim = TIM1
 };
 
+struct adc_driver_s adc = {
+	.instance = ADC1
+};
+
 // **************************************************************
 
 static uint8_t sync0_irq_flag = 0;
@@ -97,6 +103,8 @@ void ecatapp_init(void) {
 	init_override();
 
     stp_init(&stp);
+	adc_init(&adc);
+	adc_start(&adc);
     //stp_enable(&stp);
 }
 
@@ -154,10 +162,6 @@ void app_cia402_init(void)
 
 void app_cia402_mc()
 {
-    // TODO motion control here
-    Obj.Position_actual = Obj.Target_position; // dummy loopback
-    Obj.Velocity_actual = Obj.Target_velocity;
-
     // TODO: Заменить всё это на хуки
     if (cia402axis.state == OPERATION_ENABLED || cia402axis.state == QUICK_STOP_ACTIVE || \
             cia402axis.state == FAULT_REACTION_ACTIVE) {
@@ -178,13 +182,17 @@ void app_cia402_mc()
     } else {
         stp_setdir_counterclockwise(&stp);
     }
-    stp_set_period_us(&stp, 1000000 / abs(vel_int));
+	float vel_sps = vel_int / ALPHA * 32;
+    stp_set_period_us(&stp, 1000000 / (uint16_t)vel_sps);
     // csp is the only supported mode for now
     *(cia402axis.statusword) |= CIA402_STATUSWORD_CSP_DRIVE_FOLLOWS_COMMAND;
 }
- 
+
 void ecatapp_loop(void)
 {
+	adc_update(&adc);
+	Obj.Position_actual = (int32_t)adc.position << 16;
+	Obj.Velocity_actual = (int32_t)adc.velocity << 16;
     // stack in mixed mode
     if (sync0_irq_flag) {
         ESC_updateALevent();        
@@ -210,4 +218,8 @@ void ecatapp_loop(void)
 void TIM1_CC_IRQHandler(void) {
 	stp.tim->SR &= ~TIM_SR_CC1IF;
 	stp.isr_callback();
+}
+
+void ADC_IRQHandler(void) {
+	adc_irq_callback(&adc);
 }

@@ -6,17 +6,18 @@
 #ifndef NULL
     #define NULL (void*)0
 #endif
+#define ALPHA 1.8
 
 /* Macros */
 #define pin_set(__PIN__) (__PIN__.port->ODR &= ~(0x1 << (uint32_t)(__PIN__.pin)))
 #define pin_reset(__PIN__) (__PIN__.port->ODR |= (0x1 << (uint32_t)(__PIN__.pin)))
 
 #define stp_enable(__STP__) do { \
-    (pin_set((__STP__)->en_pin)); \
+    (pin_reset((__STP__)->en_pin)); \
     (__STP__)->enabled = true; } while (0)
 
 #define stp_disable(__STP__) do { \
-    (pin_reset((__STP__)->en_pin)); \
+    (pin_set((__STP__)->en_pin)); \
     (__STP__)->enabled = false; } while (0)
 
 #define stp_is_enabled(__STP__) ((__STP__)->enabled)

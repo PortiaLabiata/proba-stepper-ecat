@@ -1,0 +1,350 @@
+[
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -x assembler-with-cpp -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src -c -o .pio/build/disco_f4/FrameworkCMSISVariant/startup_stm32f40xx.o /home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4/startup_stm32f40xx.S",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4/startup_stm32f40xx.S",
+        "output": ".pio/build/disco_f4/FrameworkCMSISVariant/startup_stm32f40xx.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkCMSISVariant/system_stm32f4xx.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4/system_stm32f4xx.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4/system_stm32f4xx.c",
+        "output": ".pio/build/disco_f4/FrameworkCMSISVariant/system_stm32f4xx.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/misc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/misc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/misc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/misc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_adc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_adc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_adc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_adc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_can.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_can.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_can.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_can.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_crc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_crc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_crc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_crc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_aes.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_aes.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_aes.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_aes.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_des.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_des.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_des.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_des.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_tdes.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_tdes.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_cryp_tdes.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_cryp_tdes.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_dac.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dac.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dac.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_dac.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_dbgmcu.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dbgmcu.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dbgmcu.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_dbgmcu.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_dcmi.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dcmi.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dcmi.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_dcmi.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_dma.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dma.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dma.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_dma.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_dma2d.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dma2d.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_dma2d.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_dma2d.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_exti.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_exti.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_exti.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_exti.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_flash.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_flash.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_flash.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_flash.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_flash_ramfunc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_flash_ramfunc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_flash_ramfunc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_flash_ramfunc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_fsmc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_fsmc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_fsmc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_fsmc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_gpio.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_gpio.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_gpio.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_gpio.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash_md5.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash_md5.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash_md5.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash_md5.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash_sha1.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash_sha1.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_hash_sha1.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_hash_sha1.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_i2c.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_i2c.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_i2c.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_i2c.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_iwdg.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_iwdg.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_iwdg.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_iwdg.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_ltdc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_ltdc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_ltdc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_ltdc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_pwr.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_pwr.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_pwr.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_pwr.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_rcc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rcc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rcc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_rcc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_rng.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rng.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rng.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_rng.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_rtc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rtc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_rtc.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_rtc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_sai.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_sai.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_sai.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_sai.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_sdio.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_sdio.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_sdio.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_sdio.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_spi.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_spi.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_spi.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_spi.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_syscfg.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_syscfg.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_syscfg.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_syscfg.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_tim.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_tim.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_tim.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_tim.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_usart.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_usart.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_usart.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_usart.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/FrameworkSPL/stm32f4xx_wwdg.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src /home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_wwdg.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src/stm32f4xx_wwdg.c",
+        "output": ".pio/build/disco_f4/FrameworkSPL/stm32f4xx_wwdg.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib59c/cia402device/cia402device.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/cia402device -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/cia402device/cia402device.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/cia402device/cia402device.c",
+        "output": ".pio/build/disco_f4/lib59c/cia402device/cia402device.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib31d/bsp/delay.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/bsp/delay.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/bsp/delay.c",
+        "output": ".pio/build/disco_f4/lib31d/bsp/delay.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib31d/bsp/stm32f4_discovery.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/bsp/stm32f4_discovery.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/bsp/stm32f4_discovery.c",
+        "output": ".pio/build/disco_f4/lib31d/bsp/stm32f4_discovery.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib31d/bsp/system_stm32f4xx.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/bsp/system_stm32f4xx.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/bsp/system_stm32f4xx.c",
+        "output": ".pio/build/disco_f4/lib31d/bsp/system_stm32f4xx.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib31d/bsp/usart.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/bsp/usart.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/bsp/usart.c",
+        "output": ".pio/build/disco_f4/lib31d/bsp/usart.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libeb7/soes_hal_bsp/esc_irq.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes_hal_bsp/esc_irq.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes_hal_bsp/esc_irq.c",
+        "output": ".pio/build/disco_f4/libeb7/soes_hal_bsp/esc_irq.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libeb7/soes_hal_bsp/rst.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes_hal_bsp/rst.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes_hal_bsp/rst.c",
+        "output": ".pio/build/disco_f4/libeb7/soes_hal_bsp/rst.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libeb7/soes_hal_bsp/spi.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes_hal_bsp/spi.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes_hal_bsp/spi.c",
+        "output": ".pio/build/disco_f4/libeb7/soes_hal_bsp/spi.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib09b/soes-esi/objectlist.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes-esi/objectlist.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes-esi/objectlist.c",
+        "output": ".pio/build/disco_f4/lib09b/soes-esi/objectlist.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/ecat_slv.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/ecat_slv.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/ecat_slv.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/ecat_slv.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/esc.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/esc.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/esc.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/esc.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/esc_coe.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/esc_coe.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/esc_coe.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/esc_coe.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/esc_eep.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/esc_eep.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/esc_eep.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/esc_eep.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/esc_eoe.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/esc_eoe.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/esc_eoe.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/esc_eoe.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/esc_foe.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/esc_foe.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/esc_foe.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/esc_foe.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/libd1d/soes/hal/ax58100/esc_hw.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/soes/hal/ax58100/esc_hw.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/soes/hal/ax58100/esc_hw.c",
+        "output": ".pio/build/disco_f4/libd1d/soes/hal/ax58100/esc_hw.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib662/stepper/stepper.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/stepper/include -Ilib/stepper/src -Ilib/bsp -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/stepper/src/stepper.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/stepper/src/stepper.c",
+        "output": ".pio/build/disco_f4/lib662/stepper/stepper.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/lib2f8/traj/traj_trapez.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Ilib/traj/include -Ilib/traj/src -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src lib/traj/src/traj_trapez.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "lib/traj/src/traj_trapez.c",
+        "output": ".pio/build/disco_f4/lib2f8/traj/traj_trapez.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/src/ecatapp.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Iinclude -Isrc -Ilib/traj/include -Ilib/traj/src -Ilib/stepper/include -Ilib/stepper/src -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -Ilib/cia402device -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src src/ecatapp.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "src/ecatapp.c",
+        "output": ".pio/build/disco_f4/src/ecatapp.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/src/main.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Iinclude -Isrc -Ilib/traj/include -Ilib/traj/src -Ilib/stepper/include -Ilib/stepper/src -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -Ilib/cia402device -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src src/main.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "src/main.c",
+        "output": ".pio/build/disco_f4/src/main.o"
+    },
+    {
+        "command": "/home/portia_labiata/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc -o .pio/build/disco_f4/src/pdo_override.o -c -Os -ffunction-sections -fdata-sections -Wall -mthumb -nostdlib -mcpu=cortex-m4 -DPLATFORMIO=60118 -DSTM32F4 -DSTM32F407xx -DSTM32F40_41xxx -DARDUINO_STM32DiscoveryF407 -DBOARD_discovery_f4 -DHSE_VALUE=8000000U -DAX58100 -DF_CPU=168000000L -DDISCO_F407VG -DUSE_STDPERIPH_DRIVER -Iinclude -Isrc -Ilib/traj/include -Ilib/traj/src -Ilib/stepper/include -Ilib/stepper/src -Ilib/soes-esi -Ilib/soes/include -Ilib/soes -Ilib/soes_hal_bsp -Ilib/bsp -Ilib/cia402device -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/cores/stm32 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/cmsis/variants/stm32f4 -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/inc -I/home/portia_labiata/.platformio/packages/framework-spl/stm32/spl/variants/stm32f4/src src/pdo_override.c",
+        "directory": "/home/portia_labiata/ecat_servo/examples/SOES_CIA402_AX58100",
+        "file": "src/pdo_override.c",
+        "output": ".pio/build/disco_f4/src/pdo_override.o"
+    }
+]

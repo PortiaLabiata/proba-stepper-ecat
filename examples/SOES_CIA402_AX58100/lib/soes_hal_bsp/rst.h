@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include "stm32f4xx_conf.h"
 
-#define ESC_RCC_APB1PERIPH_GPIOX_RSTN   RCC_AHB1Periph_GPIOA
-#define ESC_GPIOX_RSTN                  GPIOA
+#define ESC_RCC_APB1PERIPH_GPIOX_RSTN   RCC_AHB1Periph_GPIOB
+#define ESC_GPIOX_RSTN                  GPIOB
 #define ESC_GPIO_Pin_RSTN               GPIO_Pin_2
 
 

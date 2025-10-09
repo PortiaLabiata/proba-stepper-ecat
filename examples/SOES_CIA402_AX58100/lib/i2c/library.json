@@ -1,0 +1,8 @@
+{
+    "name": "IIC",
+    "version": "1.0.0",
+    "description": "I2C Driver",
+    "keywords": "I2C, driver",
+    "frameworks": "*",
+    "platforms": "*"
+}  

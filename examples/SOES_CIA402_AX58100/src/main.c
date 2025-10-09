@@ -6,14 +6,11 @@
 #include "esc.h"
 #include "ecat_slv.h"
 #include "ecatapp.h"
-
-#include "stepper.h"
-#include "traj_trapez.h"
+#include "encoder.h"
 
 void stp_isr_callback(void);
 void stp_ll_config(void);
-
-struct traj_trapez_t traj;
+void adc_ll_config(void);
 
 int main(void)
 {
@@ -21,14 +18,20 @@ int main(void)
 	APP_USART_Init();
 	delay_init(); 
 	stp_ll_config();
+	adc_ll_config();
+
     STM_EVAL_PBInit(BUTTON_MODE_GPIO);
     ecatapp_init();
-
-	//traj_trapez_prime(&traj, &init);
 
 	while (1) {
         ecatapp_loop();
 	}
+}
+
+void adc_ll_config(void) {
+	GPIOA->MODER |= (GPIO_MODER_MODER2_0 | GPIO_MODER_MODER2_1);
+	GPIOA->PUPDR &= ~GPIO_PUPDR_PUPDR2;
+	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
 }
 
 void stp_ll_config(void) {
